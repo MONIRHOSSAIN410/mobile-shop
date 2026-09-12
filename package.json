@@ -9,11 +9,12 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "node --watch server.js",
-    "start": "node server.js",
+    "dev": "node api.js && node --watch server.js",
+    "start": "node api.js && node server.js",
     "seed": "node src/seed/seed.js",
     "seed:fresh": "node src/seed/seed.js --fresh",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "db:check": "node scripts/db-doctor.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
